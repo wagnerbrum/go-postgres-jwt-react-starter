@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "75f5371e-f426-4d87-b3b2-9b3a03a17a91",
+		"name": "API - Code Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"wagner3\",\r\n    \"email\": \"wagner@teste.com\",\r\n    \"password\": \"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"wagner@teste.com\",\r\n    \"password\": \"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Add or Update Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"abc-123-ZYZ\",\r\n    \"registrationTime\": 0,\r\n    \"email\": \"jsmith123@example.com\",\r\n    \"emailVerifiedTime\": 1512828988826,\r\n    \"name\": \"John Smith\",\r\n    \"familyName\": \"Smith\",\r\n    \"givenName\": \"John\",\r\n    \"telephone\": \"+16045555555\",\r\n    \"telephoneVerifiedTime\": 1512828988826,\r\n    \"telephoneCountry\": \"DOM\",\r\n    \"location\": {\r\n        \"country\": \"GBR 123\",\r\n        \"postalCode\": \"E1 1AA\",\r\n        \"latitude\": 51.503252,\r\n        \"longitude\": -0.127899,\r\n        \"addresseeName\": \"John Smith\",\r\n        \"street1\": \"123 fake st.\",\r\n        \"street2\": \"floor 4, flat 48\",\r\n        \"neighbourhood\": \"Hackney\",\r\n        \"zone\": \"1\",\r\n        \"city\": \"London\",\r\n        \"region\": \"California\",\r\n        \"poBoxNumber\": \"1234\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By ID Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/customers/abc-123-ZYZ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customers",
+								"abc-123-ZYZ"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/customers/abc-123-ZYZ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customers",
+								"abc-123-ZYZ"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "Add or Update Payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paymentMethodId\": \"pm-abc-123\",\r\n    \"customerId\": \"abc-123-ZYZ\",\r\n    \"methodType\": \"card\",\r\n    \"instrumentId\": \"fp_abc123\",\r\n    \"cardBin\": \"535522\",\r\n    \"cardLastFour\": \"0001\",\r\n    \"expiryMonth\": 7,\r\n    \"expiryYear\": 2020,\r\n    \"eWallet\": \"applepay\",\r\n    \"nameOnCard\": \"John Smith\",\r\n    \"billingAddress\": {\r\n        \"country\": \"GBR\",\r\n        \"postalCode\": \"E1 1AA2\",\r\n        \"latitude\": 51.503252,\r\n        \"longitude\": -0.127899,\r\n        \"addresseeName\": \"John Smith\",\r\n        \"street1\": \"123 fake st.\",\r\n        \"street2\": \"floor 4, flat 48\",\r\n        \"neighbourhood\": \"Hackney\",\r\n        \"zone\": \"1\",\r\n        \"city\": \"London\",\r\n        \"region\": \"California\",\r\n        \"poBoxNumber\": \"1234\"\r\n    },\r\n    \"successfulRegistration\": true,\r\n    \"registrationTime\": 1512828988826,\r\n    \"lastVerified\": 1512828988826\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Payment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/customers/pm-abc-123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customers",
+								"pm-abc-123"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

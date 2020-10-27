@@ -1,0 +1,27 @@
+.container-register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-register .card {
+    min-height: 500px;
+    max-height: 500px;
+    padding-bottom: 15px;
+}
+
+.container-register .card form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.container-register .card .row {
+    flex-direction: column;
+}
+
+.container-register .card form button {
+    width: 300px;
+}

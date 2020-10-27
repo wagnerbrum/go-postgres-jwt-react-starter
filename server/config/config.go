@@ -1,9 +1,21 @@
 package config
 
 const (
-	DB_USER     = "postgres"
-	DB_PASSWORD = "postgres"
-	DB_NAME     = "postgres"
-	HOST_NAME   = "db"
-	CLIENT_URL  = "http://localhost:3000"
+	//DbUser database user
+	DbUser = "postgres"
+
+	//DbPassword database password
+	DbPassword = "root"
+
+	//DbName database name
+	DbName = "goauth"
+
+	//HostName database host
+	HostName = "localhost"
+
+	//ClientUrl url client frontend (used in cors)
+	ClientUrl = "http://localhost:3000"
+
+	//JwtKey jwt key
+	JwtKey = "secret"
 )

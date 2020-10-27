@@ -1,0 +1,26 @@
+.container-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-login .card {
+    min-height: 400px;
+    max-height: 500px;
+}
+
+.container-login .card form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.container-login .card .row {
+    flex-direction: column;
+}
+
+.container-login .card form button {
+    width: 300px;
+}

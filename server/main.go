@@ -3,10 +3,10 @@ package main
 import (
 	_ "database/sql"
 
+	_ "github.com/lib/pq"
+
 	"github.com/rogaha/go-postgres-jwt-react-starter/server/db"
 	"github.com/rogaha/go-postgres-jwt-react-starter/server/router"
-
-	_ "github.com/lib/pq"
 )
 
 func init() {
